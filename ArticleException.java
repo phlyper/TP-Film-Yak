@@ -14,9 +14,5 @@ public class ArticleException extends Exception {
 	public ArticleException(String message) {
 		super(message);
 	}
-	@Override
-	public void finalize() throws Throwable {
-		super.finalize();
-		System.out.println(this.getClass().getName()+" Objet nettoyé de la mémoire");
-	}
+
 }
