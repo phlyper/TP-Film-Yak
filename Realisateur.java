@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author Atef
  */
 public class Realisateur {
+	
 	private String nom;
 	private String prenom;
 	private ArrayList<Film> films = new ArrayList<Film>();
@@ -36,10 +37,5 @@ public class Realisateur {
 	public String getPrenom() {
 		return prenom;
 	}
-	
-	@Override
-	public void finalize() throws Throwable {
-		super.finalize();
-		System.out.println(this.getClass().getName()+" Objet nettoyé de la mémoire");
-	}
+
 }
