@@ -18,6 +18,7 @@ public class Adherent {
 	public Adherent(String nom, String prenom, String adresse) {
 		this.nom = nom;
 		this.prenom = prenom;
+		this.adresse = adresse;
 		this.noAdherent = Adherent.compteurAdherent;
 		Adherent.compteurAdherent++;
 	}
@@ -69,6 +70,12 @@ public class Adherent {
 
 	public int getNoAdherent() {
 		return noAdherent;
+	}
+
+	@Override
+	public void finalize() throws Throwable {
+		super.finalize();
+		System.out.println(this.getClass().getName()+" Objet nettoyé de la mémoire");
 	}
 
 }
